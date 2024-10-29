@@ -1,0 +1,694 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f4ef;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e5a3a3;
+    padding: 20px 40px;
+}
+.logo {
+    background-image: url("css/tss.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 200px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #e5a3a3;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+.navbar {
+    background-color: #e5a3a3;
+}
+
+.navbar .navbar-brand .logo {
+    background-image: url("css/tss.svg"); /* Ensure the logo appears */
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 200px;
+}
+
+.navbar-toggler {
+    border: none; 
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; 
+    cursor: pointer;
+    font-weight: 700; 
+}
+.navbar-nav .nav-link:focus {
+    outline: 2px dashed #e57373; /* Dashed yellow outline for focused link */
+    background-color: #e5a3a3; /* Light yellow background when focused */
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline; 
+    color: #e57373; 
+}
+.navbar-nav .nav-link.active {
+    color: #e57373;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #f7e2e2;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background-color: #fff8e1; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+figure img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+main p {
+    font-size: 1.2em;
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* Section Headings */
+main h2, .section-heading {
+    font-size: 2em;
+    color: #e57373; 
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.credits {
+    text-align: center;
+    padding: 20px;
+    background-color: #e5a3a3;
+    color: #ffffff;
+}
+
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+    margin: 20px auto;
+}
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px auto;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+#order {
+    max-width: 500;
+}
+
+#order .form label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #e57373;
+}
+
+#order .form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f7f4ef;
+}
+
+#order .form input[type="submit"] {
+    background-color: #e5a3a3;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#order .form input[type="submit"]:hover {
+    background-color: #d89494;
+}
+main h5 {
+    color:#e57373;
+
+}
+.team {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 40px auto;
+}
+
+.team h3 {
+    font-size: 1.5em;
+    color: #e57373;
+    margin-top: 10px;
+} 
+
+.team-member {
+    width: 30%;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    color: #e57373;
+    margin-top: 10px;
+}
+.seasonal-menu {
+    display: grid;
+    background-color: #FFBE98;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+    border-radius: 8px;
+    padding: 40px 20px;
+    margin: 20px 20px;
+}
+
+.smenu-item {
+    text-align: center;
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+.smenu-item img {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    height: 300px; 
+    object-fit: cover;
+}
+
+.smenu-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.3em;
+    color: #e57373;
+}
+
+.smenu-item p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin: 20px 0;
+    padding: 10px 40px;
+}
+.btn-success {
+    background-color: #e57373; /* Your custom color */
+    border-color: #fff; /* Border color, if any */
+
+}
+.custom-btn:hover {
+    background-color: #e5a3a3 ;}
+    .custom-bg-pink {
+        background-color: #e5a3a3; 
+    }
+    
+.carousel-control-prev,
+.carousel-control-next {
+        width: 5%; /* Adjust width for more space */
+    }
+    
+.carousel-item img {
+        height: auto;
+        width: 100%;
+        object-fit: cover; /* Ensure images cover the space without distortion */
+    }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='https://www.w3.org/2000/svg' fill='fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+.carousel-inner .carousel-item {
+        transition: -webkit-transform 2s ease;
+        transition: -moz-transform 2s ease;
+        transition: -ms-transform 2s ease;
+        transition: transform 2s ease;
+        transition: all 2s ease;
+      }
+      
+.social-links {
+        background-color: none;
+        text-align: center; /* Center the text and links */
+        padding: 20px 0; /* Add some padding for spacing */
+    }
+    
+.social-links a {
+        color: #d89494;
+        margin: 0 15px; /* Space between links */
+        text-decoration: none;
+        font-size: 15px;
+    }
+    
+.social-links a i {
+        margin-right: 8px;
+        max-width: 20px;
+    }
+    
+.social-links a:hover {
+        color: #e57373;
+    }
+    
+#newsletter {
+    max-width: 450px;
+    border: none;
+    background-color: none;
+    box-shadow: none;
+}
+#newsletter .form-label {
+    font-size: 20px;
+    background-color: none;
+    color: #e5a3a3;
+    text-align: center;
+}
+#newsletter .form-control {
+    justify-content: center;
+}
+#newsletter .btn {
+    color:#fff;
+    background-color: #d89494;
+}
+footer {
+    padding: 20px 15px;
+}
+footer a {
+    color:#e5a3a3
+}
+footer a:hover {
+    color: #e57373; 
+    text-decoration: underline; 
+}
+footer p{
+    font-size: 15px;
+    color: #4a4a4a;
+}
+footer h5 {
+    color: #e5a3a3;
+    font-size: 20px;
+}
+.link-list {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    max-width: 300px; /* Set a max width for the list */
+    padding-left: 60px;
+    margin-bottom: 100px;
+    margin: 20px; /* Margin around the link list */
+}
+.link-item {
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Center items vertically */
+    background-color: #f8d3d3; /* Light pink background */
+    padding: 10px; /* Padding for the link */
+    margin: 5px 0; /* Margin between links */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+.link-item span {
+    font-weight: bold; /* Make text bold */
+    font-size: 16px; /* Font size for the text */
+}
+.btn-open-popup {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #fff8e1;
+    color: #fff;    
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-open-popup:hover {
+    top: 100px;
+}
+
+.overlay-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.overlay-container.show {
+    display: block;
+  }
+  
+.popup-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    width: 450px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.form-label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
+    text-align: left;
+}
+
+.form-input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-submit,
+.btn-close-popup {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-submit {
+    background-color:#e57373;
+    color: #fff;
+}
+
+.btn-close-popup {
+    background: transparent; /* Make background transparent */
+    border: none; /* Remove border */
+    color: #000; /* Set color */
+    font-size: 20px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer */
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+}
+
+#newsletter {
+    position: relative; /* Make the form a positioned ancestor */
+    padding: 20px; /* Add padding around the form */
+}
+
+
+.btn-submit:hover {
+    background-color: #d89494;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation */
+.overlay-container.show {
+    display: flex;
+    opacity: 1;
+} 
+
+.accordion-section {
+    margin-top: 20px; 
+    padding: 0 20px; 
+}
+  
+.accordion {
+    background-color: #ba7070;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 90%; 
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: 0 auto 10px auto; /* центрирует элемент и добавляет отступ снизу */
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: large;
+}
+  
+.accordion:hover,
+.accordion.active {
+    background-color: #e5a3a3; 
+}
+  
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 5px;
+}
+  
+
+.accordion:after {
+    content: '🤍'; 
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+}
+  
+/* .active:after {
+    content: "1"; 
+} */
+
+
+.btn-custom {
+    background-color: #e5a3a3 !important; 
+    color: #ffffff;
+    padding: 15x 30px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+
+.btn-custom:hover { 
+    background-color: #ba7070 !important; 
+    transform: scale(1.05); 
+}
+  
+.btn-custom:active {
+    background-color: #ba7070 !important; 
+    transform: scale(0.98); 
+}
+
+#datetime {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color:#d89494
+    
+}
+#time-display {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #333;
+}
+.form-step {
+    display: none; /* Hide all steps by default */
+}
+.form-step.active {
+    display: block; /* Show the active step */
+}
+#greeting {
+    text-align: center;
+    color:#e57373;
+
+}
+
+#randomQuoteSection {
+    text-align: center; /* Center the text and button */
+    margin-top: 50px; /* Add some space from the top */
+}
+  
+#quoteDisplay {
+    font-size: 18px;
+    color: #555555; /* Soft gray for the text */
+    margin-bottom: 20px;
+    font-style: italic;
+    text-align: center;
+    font-size: 24px;
+    font-weight:700;
+}
+  
+#quoteDisplay {
+    font-family: 'Roboto', sans-serif;
+}
+  
+#getQuoteButton {
+    background-color: #e5a3a3; /* Match the custom background color */
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+#getQuoteButton:hover {
+    background-color: #ba7070; /* Same hover effect */
+    transform: scale(1.05);
+}
+  
+#getQuoteButton:active {
+    background-color: #ba7070; /* Same active effect */
+    transform: scale(0.98);
+}
+
+.content-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    text-align: center;
+    transition: opacity 0.5s ease, height 0.5s ease;
+    opacity: 1;
+    height: auto;
+}
+  
+.hidden {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+  
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Slight rounding for smoother look */
+    overflow: hidden;
+}
+.card img {
+    border-radius: 10px;
+}  
+  /* On hover, the card will scale up and add a shadow */
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow for a floating effect */
+}
+  
+  /* Optional: Adjust the card images to match the effect */
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+  
+  /* Optional: Zoom in on the image on hover */
+.card:hover .card-img-top {
+    transform: scale(1.1); /* Slight zoom on the image */
+}  
+
+#toggleDiv {
+    transition: opacity 0.5s, max-height 0.5s, padding 0.5s; /* Smooth transitions */
+    max-height: 200px; /* Set max-height to your desired height */
+    overflow: hidden; /* Prevents overflow during the height transition */
+}
+#toggle-time {
+    padding: 10px 20px;
+    background-color: #e5a3a3; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+#toggle-time:hover {
+    background-color: #e57373; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+#toggle-time:active {
+    transform: scale(0.95); /* Slightly decrease size when clicked */
+}
+.loginpop {
+    padding: 8px 28px;
+    background-color: #e5a3a3;
+    color: #fff;    
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+.loginpop:hover{
+    color:#e57373;
+    text-decoration: underline;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sweet Spot | Location</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg" href="css/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <a class="navbar-brand" href="home.html">
+      <div class="logo"></div>
+    </a>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="location.html">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">
+                <i class="fas fa-user"></i> Log in
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-5">
+    <section class="row mb-5">
+      <div class="col-lg-6 col-md-12">
+        <h2>Our Location</h2>
+        <p class="mb-3">Find us at Kunayeva 7, Astana city</p>
+        <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.631438489202!2d71.4190243658592!3d51.13370599615191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424586a220c43851%3A0x4a035f9cfcc12ede!2sRixos%20President%20Astana!5e0!3m2!1sen!2skz!4v1726043687775!5m2!1sen!2skz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  
+      <div class="col-lg-6 col-md-12">
+        <h2>✧ Order now ✧</h2>
+        <div id="multiStepForm">
+          <form id="order" class="p-4 bg-light rounded-3">
+              <!-- Step 1: User Information -->
+              <div class="form-step active">
+                  <h2>User Information</h2>
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Your Name:</label>
+                      <input class="form-control" id="name" name="name">
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Your Email:</label>
+                      <input class="form-control" id="email" name="email" type="email">
+                  </div>
+                  <button type="button" class="btn btn-success" onclick="nextStep()">Next</button>
+              </div>
+      
+              <!-- Step 2: Location and Password -->
+              <div class="form-step">
+                  <h2>Location and Password</h2>
+                  <div class="mb-3">
+                      <label for="subject" class="form-label">City</label>
+                      <select id="subject" name="subject" class="form-select">
+                          <option value="" disabled selected>Select a city</option>
+                          <option value="Astana">Astana</option>
+                          <option value="Almaty">Almaty</option>
+                          <option value="Aktau">Aktau</option>
+                      </select>
+                  </div>
+                  <div class="mb-3">
+                      <label for="password" class="form-label">Password:</label>
+                      <input class="form-control" id="password" name="password" type="password">
+                  </div>
+                  <div class="mb-3">
+                      <label for="confirm_password" class="form-label">Confirm Password:</label>
+                      <input class="form-control" id="confirm_password" name="confirm_password" type="password">
+                  </div>
+                  <button type="button" class="btn btn-secondary" onclick="prevStep()">Back</button>
+                  <button type="button" class="btn btn-success" onclick="nextStep()">Next</button>
+              </div>
+      
+              <!-- Step 3: Order Details -->
+              <div class="form-step">
+                  <h2>Your Order</h2>
+                  <div class="mb-3">
+                      <label for="message" class="form-label">Your Order:</label>
+                      <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                  </div>
+                  <button type="button" class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    
+        <audio id="submitSound" src="css/sound.mp3" preload="auto"></audio>
+        <button type="submit" class="btn btn-success btn-lg w-100">Submit</button>
+              </div>
+          </form>
+      </div>
+        
+        
+      </div>
+    </section>
+    <section class="row mb-5">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <h2>Special Offers</h2>
+        <p>Get the best deals for our bakery items.</p>
+      </div>
+  
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <h2>Contact Us</h2>
+        <div class="social-links">
+          <a href="https://www.instagram.com/yourprofile" target="_blank" class="me-3">
+              <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a href="https://wa.me/87786163610" target="_blank" class="me-3">
+              <i class="fab fa-whatsapp fa-2x"></i>
+          </a>
+          <a href="https://telegram.org/yourphonenumber" target="_blank">
+              <i class="fab fa-telegram fa-2x"></i>
+          </a>
+      </div>
+        <p>Feel free to get in touch for custom orders.</p>
+      </div>
+  
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <h2>Working Hours</h2>
+        <button id="toggle-time">Show Current Time</button>
+    <div id="time-display" style="display: none;"></div>
+
+    
+        <p>We are open from 8 AM to 8 PM, Monday to Saturday.</p>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="container-fluid d-flex justify-content-between align-items-start p-4">
+    <div class="col-md-4 d-flex flex-column align-items-start">
+        <h3>Be Part of Our Baking Journey!</h3>
+        <p>Don't miss out on exclusive updates and sweet surprises.</p>
+        <form id="newsletter" class="p-4 rounded-3 w-100">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="name2" placeholder="Your name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="email2" placeholder="Your email" name="email" required>
+            </div>
+            <button type="submit" class="btn btn-light btn-lg w-100">Join</button>
+            <p class="small">We won't send you spam. Unsubscribe at any time.</p>
+        </form>
+    </div>
+    <div class="col-md-4 text-center">
+      <h3>Quick Links</h3>
+      <div class="link-list">
+        <a href="home.html" class="link-item d-block">Home</a>
+        <a href="about.html" class="link-item d-block">About us</a>
+        <a href="location.html" class="link-item d-block">Location</a>
+        <a href="menu.html" class="link-item d-block">Menu</a>
+      </div>
+    </div>
+    <div class="col-md-4 text-center">
+        <h3>Contact Us</h3>
+        <div class="social-links">
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="me-3">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://wa.me/87786163610" target="_blank" class="me-3">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+            <a href="https://telegram.org/yourphonenumber" target="_blank">
+                <i class="fab fa-telegram fa-2x"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<div class="text-center my-3">
+  <button id="colorButton" class="btn btn-custom mt-3">Change Background Color</button>
+</div>
+
+<div class="credits text-center mt-3">
+  <p>&copy; 2024 The Sweet Spot | Created by Kuvanich Zhansaya and Kairanbay Arailym |</p>
+</div>
+
+<script src="sweet.js"></script>
+<script src="form.js"></script>
+<script src="scrypt.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
