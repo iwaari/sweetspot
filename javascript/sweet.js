@@ -147,6 +147,25 @@ submitButton.addEventListener('click', (event) => {
     submitSound.play(); 
 });
 function LoginPopup() {
-    const overlay = document.getElementById('popupOverlay');
+    const overlay = document.getElementById('login-popup');
     overlay.classList.toggle('show');
 }
+function SignupPopup() {
+    const overlay = document.getElementById('signup-popup');
+    overlay.classList.toggle('show');
+}
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwxrr9gY3hHl86SuG0uv8nQa0NJHnmqFYqzCzrqM0w4wWDuE-B--j9r9iwch5FHZK6o/exec'
+
+
+const form = document.forms['login-form']
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})

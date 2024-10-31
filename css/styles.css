@@ -13,7 +13,7 @@ header {
     padding: 20px 40px;
 }
 .logo {
-    background-image: url("css/tss.svg");
+    background-image: url("../css/tss.svg");
     background-repeat: no-repeat;
     background-size: contain;
     height: 40px;
@@ -431,8 +431,14 @@ footer h5 {
 }
 
 .btn-submit {
-    background-color:#e57373;
+    background-color:#e5a3a3;
+    font-weight: 600;
+    font-size: 18px;
     color: #fff;
+}
+.btn-submit:hover {
+    background-color: #e57373;
+
 }
 
 .btn-close-popup {
@@ -679,7 +685,7 @@ footer h5 {
 #toggle-time:active {
     transform: scale(0.95); /* Slightly decrease size when clicked */
 }
-.loginpop {
+.btn-login {
     padding: 8px 28px;
     background-color: #e5a3a3;
     color: #fff;    
@@ -688,7 +694,68 @@ footer h5 {
     font-weight: 700;
     transition: background-color 0.3s ease;
 }
-.loginpop:hover{
+.btn-login:hover{
     color:#e57373;
     text-decoration: underline;
+}
+.login-box {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    width: 450px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+.signup-box {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    width: 450px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+.btn-signup {
+    background-color: #fff;
+    border: none;
+    color:#e5a3a3;
+    font-weight: 600;
+}
+.btn-signup:hover {
+    color:#e57373;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.btn-signup1 {
+    padding: 8px 28px;
+    background-color: #e5a3a3;
+    color: #fff;    
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+.btn-signup1:hover {
+    color:#e57373;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.btn-logout {
+    padding: 8px 28px;
+    background-color: #e5a3a3;
+    color: #fff;    
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+.btn-logout:hover {
+    color:#e57373;
+    text-decoration: underline;
+    font-weight: 500;
 }

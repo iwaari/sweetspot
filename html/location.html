@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Sweet Spot | Location</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
   <link rel="icon" type="image/svg" href="css/favicon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -34,16 +34,51 @@
             <li class="nav-item">
               <a class="nav-link" href="menu.html">Menu</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="menu.html">
-                <i class="fas fa-user"></i> Log in
-              </a>
-            </li>
+            <li class="nav-item" id="auth-buttons">
+              <button class="btn-login" onclick="LoginPopup()">
+                  <i class="fas fa-user"></i> Log in
+              </button>
+              <button class="btn-signup1" onclick="SignupPopup()">Sign Up</button>
+          </li>
+          <li class="nav-item" id="profile-section" style="display: none;">
+              <button class="btn-logout" onclick="logout()">
+                  <i class="fas fa-sign-out-alt"></i> Logout
+              </button>
+          </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+  <div id="login-popup" class="overlay-container">
+    <div class="login-box">
+        <h2>✧ Login ✧</h2>
+        <form class="form-container" name="login-form" onsubmit="handleLogin(event)">
+            <input class="form-input" type="email" placeholder="Email" id="login-email" name="email" required>
+            <input class="form-input" type="password" placeholder="Password" id="login-password" name="password" required>
+            <button class="btn-submit" type="submit">Submit</button>
+            <p>Not a member?</p>
+            <button class="btn-signup" onclick="SignupPopup()">Signup now</button>
+        </form>
+        <button class="btn-close-popup" onclick="LoginPopup()">
+          <i class="fas fa-times"></i>
+      </button>
+      </div>
+</div>
+<div id="signup-popup" class="overlay-container">
+  <div class="signup-box">
+      <h2>✧ Sign Up ✧</h2>
+      <form class="form-container" onsubmit="handleSignup(event)">
+          <input class="form-input" type="text" placeholder="Username" id="signup-username" name="username" required>
+          <input class="form-input" type="email" placeholder="Email" id="signup-email" name="email" required>
+          <input class="form-input" type="password" placeholder="Password" id="signup-password" name="password" required>
+          <button class="btn-submit" type="submit">Create Account</button>
+      </form>
+      <button class="btn-close-popup" onclick="SignupPopup()">
+        <i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
 
   <main class="container mt-5">
     <section class="row mb-5">
@@ -104,7 +139,7 @@
                   </div>
                   <button type="button" class="btn btn-secondary" onclick="prevStep()">Back</button>
                     
-        <audio id="submitSound" src="css/sound.mp3" preload="auto"></audio>
+        <audio id="submitSound" src="../css/sound.mp3" preload="auto"></audio>
         <button type="submit" class="btn btn-success btn-lg w-100">Submit</button>
               </div>
           </form>
@@ -195,10 +230,11 @@
   <p>&copy; 2024 The Sweet Spot | Created by Kuvanich Zhansaya and Kairanbay Arailym |</p>
 </div>
 
-<script src="sweet.js"></script>
-<script src="form.js"></script>
-<script src="scrypt.js"></script>
+<script src="../javascript/sweet.js"></script>
+<script src="../javascript/scrypt.js"></script>
+<script src="../javascript/form.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src="../server.js"></script>
 </body>
 </html>

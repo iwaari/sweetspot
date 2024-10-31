@@ -2,42 +2,42 @@ const croissants = [
     {
       name: "Classic Croissant",
       description: "A light, buttery croissant with crisp layers.",
-      image: "css/menu/classic.jfif"
+      image: "../css/menu/classic.jfif"
     },
     {
       name: "Almond Croissant",
       description: "Filled with sweet almond cream and topped with toasted almonds.",
-      image: "css/menu/almond.jfif"
+      image: "../css/menu/almond.jfif"
     },
     {
       name: "Chocolate Croissant",
       description: "A buttery croissant with a rich chocolate center.",
-      image: "css/menu/choc.jfif"
+      image: "../css/menu/choc.jfif"
     },
     {
       name: "Caramel Croissant",
       description: "A croissant with a smooth caramel filling and a crispy top.",
-      image: "css/menu/caramelc.jfif"
+      image: "../css/menu/caramelc.jfif"
     },
     {
       name: "Raspberry Croissant",
       description: "A croissant with a sweet raspberry filling.",
-      image: "css/menu/raspc.jfif"
+      image: "../css/menu/raspc.jfif"
     },
     {
       name: "Blueberry Croissant",
       description: "A croissant filled with blueberry jam.",
-      image: "css/menu/chipc.jfif"
+      image: "../css/menu/chipc.jfif"
     },
     {
       name: "Custard Croissant",
       description: "A flaky croissant with a smooth custard filling.",
-      image: "css/menu/chocc.jfif"
+      image: "../css/menu/chocc.jfif"
     },
     {
       name: "Apple Croissant",
       description: "A croissant filled with cinnamon-spiced apples.",
-      image: "css/menu/raspc.jfif"
+      image: "../css/menu/raspc.jfif"
     }
   ];
   
