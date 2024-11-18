@@ -12,6 +12,7 @@
   <script src="../javascript/darkmode.js"></script>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
   <script src="../server.js"></script>
+  <script src="../javascript/burger.js" defer=""></script>
 </head>
 <body>
   <div id="page-container">
@@ -21,9 +22,9 @@
     </a>
     <nav class="navbar navbar-expand-lg" id="navbar">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
         
         <button id="theme-toggle" class="styled-button">Toggle Light/Dark Mode</button> 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -68,13 +69,24 @@
       </div>
     </nav>
   </header>
+
+  <div class="burger-menu">
+    <button class="burger-button" onclick="toggleMenu()">☰</button>
+    <nav id="menu" class="hidden">
+      <a href="index.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="location.html">Location</a>
+      <a href="menu.html">Menu</a>
+    </nav>
+  </div>
+
   <div id="login-popup" class="overlay-container">
     <div class="login-box">
         <h2>✧ Login ✧</h2>
         <form class="form-container" name="login-form" onsubmit="handleLogin(event)">
             <input class="form-input" type="email" placeholder="Email" id="login-email" name="email" required>
             <input class="form-input" type="password" placeholder="Password" id="login-password" name="password" required>
-            <button class="btn-submit" type="submit">Submit</button>
+            <button class="btn-submit1" type="submit">Submit</button>
             <p>Not a member?</p>
             <button class="btn-signup" onclick="SignupPopup()">Signup now</button>
         </form>
@@ -90,7 +102,7 @@
           <input class="form-input" type="text" placeholder="Username" id="signup-username" name="username" required>
           <input class="form-input" type="email" placeholder="Email" id="signup-email" name="email" required>
           <input class="form-input" type="password" placeholder="Password" id="signup-password" name="password" required>
-          <button class="btn-submit" type="submit">Create Account</button>
+          <button class="btn-create" type="submit">Create Account</button>
       </form>
       <button class="btn-close-popup" onclick="SignupPopup()">
         <i class="fas fa-times"></i>
@@ -109,22 +121,20 @@
       <figure>
         <img src="../css/member/me.jfif">
       </figure>
-      <p class="mb-4">Welcome to Sweet Spot Bakery, where passion for baking and a love for community come together.Our journey began with a simple idea – to create a warm, welcoming place where people can enjoy freshly baked treats made from the finest ingredients. What started as a small kitchen experiment has grown into a beloved neighborhood bakery, where every pastry, cake, and loaf of bread is handcrafted with care.</p>
+      <p class="mb-4">⠀⠀⠀⠀Welcome to Sweet Spot Bakery, where passion for baking and a love for community come together.Our journey began with a simple idea – to create a warm, welcoming place where people can enjoy freshly baked treats made from the finest ingredients. What started as a small kitchen experiment has grown into a beloved neighborhood bakery, where every pastry, cake, and loaf of bread is handcrafted with care.</p>
       
-      <p>At Sweet Spot, we believe that food brings people together, and every bite should tell a story. From our flaky croissants to our decadent cakes, each recipe has been thoughtfully developed to capture the perfect balance of flavor and texture. Our bakers are dedicated to using time-honored techniques, ensuring that every product we make is as delicious as it is beautiful.</p>
+      <p>⠀⠀⠀⠀At Sweet Spot, we believe that food brings people together, and every bite should tell a story. From our flaky croissants to our decadent cakes, each recipe has been thoughtfully developed to capture the perfect balance of flavor and texture. Our bakers are dedicated to using time-honored techniques, ensuring that every product we make is as delicious as it is beautiful.</p>
         
-      <p>But it’s not just about the food – it’s about creating a space where people can connect and savor life’s sweet moments. Whether you’re grabbing your morning coffee, catching up with friends, or celebrating a special occasion, Sweet Spot Bakery is here to make it memorable.</p>
+      <p>⠀⠀⠀⠀But it’s not just about the food – it’s about creating a space where people can connect and savor life’s sweet moments. Whether you’re grabbing your morning coffee, catching up with friends, or celebrating a special occasion, Sweet Spot Bakery is here to make it memorable.</p>
         
-      <p>Thank you for being part of our journey. We can’t wait to serve you.</p>
+      <p>⠀⠀⠀⠀Thank you for being part of our journey. We can’t wait to serve you.</p>
       
-      <blockquote class="blockquote p-4 mb-4">
-        "We believe in the power of food to bring people together. Every pastry is a celebration of life's sweet moments."
-      </blockquote>
+    
     </section>
     <h2>Contact</h2>
-    <p>There are many ways we can keep in touch. Subscribe via email to have recipes sent straight to your inbox for free. You can also email anytime sweetspot@gmail.com</p>
-    <p>Have a question for my team and I? You’ll find these most Frequently Asked Questions helpful. If you have a question about a specific recipe, please review the comments on that post. If your question hasn’t been answered, feel free to continue the conversation by leaving a comment or question directly in that post.</p>
-    <h5>Subscribe to our newsletter to be the first to know about exclusive offers, new products, and delicious surprises. We promise to send only the good stuff</h5>
+    <p>⠀⠀⠀⠀There are many ways we can keep in touch. Subscribe via email to have recipes sent straight to your inbox for free. You can also email anytime sweetspot@gmail.com</p>
+    <p>⠀⠀⠀⠀Have a question for my team and I? You’ll find these most Frequently Asked Questions helpful. If you have a question about a specific recipe, please review the comments on that post. If your question hasn’t been answered, feel free to continue the conversation by leaving a comment or question directly in that post.</p>
+    <h5>⠀⠀⠀⠀Subscribe to our newsletter to be the first to know about exclusive offers, new products, and delicious surprises. We promise to send only the good stuff</h5>
 
     <button class="btn-open-popup" onclick="togglePopup()">
       <img src="../css/Group 4.png">
@@ -151,18 +161,39 @@
     
     <h2 class="mb-5">❀ Meet Our Team ❀</h2>
     <div class="row">
-      <div class="col-md-6 mb-4">
-        <p>Sweet Spot Bakery is powered by the passion and creativity of two lifelong friends, Arailym and Zhansaya...</p>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="team">
-          <div class="team-member mb-3">
-            <img src="../css/member/cat.jfif" alt="Main baker" class="img-fluid">
+      <div class="col-md-12">
+        <div class="team d-flex flex-wrap justify-content-center">
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/cat.jfif" alt="Main baker" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
             <p>Main baker</p>
           </div>
-          <div class="team-member">
-            <img src="../css/member/baker.jfif" alt="Baker" class="img-fluid">
-            <p>Baker</p>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/baker.jfif" alt="Baker" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Master Baker</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/pastrychef.jfif" alt="Pastry Chef" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Baker technologist</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/Admin.jfif" alt="Decorator" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Administrator</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/Conditer.jfif" alt="Assistant Chef" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Confectioner</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/Bugalter.jfif" alt="Sous Chef" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Accountant</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/Manager.jfif" alt="Manager" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Manager</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/Salesman.jfif" alt="Barista" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Salesman</p>
           </div>
         </div>
       </div>
@@ -227,7 +258,7 @@
     </section> 
 
     <div id="toggleDiv" class="content-box">
-      <p>This is a content box that can be hidden or shown with a smooth transition.</p>
+      <p>Croissant your fingers and open for a treat! ᵔ ᵕ ᵔ</p>
     </div>
     
     <button id="toggleVisibilityButton" class="btn-custom">Toggle Visibility</button>

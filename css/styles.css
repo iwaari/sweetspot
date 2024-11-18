@@ -172,11 +172,11 @@ nav {
 
 .light-mode .navbar-nav .nav-link:hover {
     text-decoration: underline; 
-    color: var(--accent-light); 
+    color: var(--secondary-light); 
 }
 .dark-mode .navbar-nav .nav-link:hover {
     text-decoration: underline;
-    color: var(--accent-dark);
+    color: var(--secondary-light);
 }
 
 .light-mode .navbar-nav .nav-link.active {
@@ -260,6 +260,9 @@ main p {
     padding: 20px;
     background-color: var(--primary-dark);
     color: #ffffff;
+}
+.dark-mode .credits p{
+    color: var(--background-light);
 }
 iframe {
     width: 100%;
@@ -677,6 +680,62 @@ main p {
     top: 10px;
     right: 10px; 
 }
+.dark-mode .btn-create {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--primary-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.light-mode .btn-create {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--primary-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.light-mode .btn-submit1 {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--primary-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.dark-mode .btn-submit1 {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--primary-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.dark-mode .btn-submit1:hover,
+.btn-create:hover{
+background-color: var(--accent-dark);
+}
+.light-mode .btn-submit1:hover,
+.btn-create:hover{
+background-color: var(--accent-light);
+}
 .btn-submit {
     padding: 12px 24px;
     border: none;
@@ -1050,18 +1109,8 @@ main p {
     outline: none;
     box-shadow: 0 0 0 3px rgba(198, 72, 78, 0.154);
 }
-.light-mode .btn-login {
-    padding: 8px 28px;
-    background-color: #e5a3a3;
-    color: #fff;    
-    border: none;
-    cursor: pointer;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-}
-.btn-login:hover{
-    color:#e57373;
-    text-decoration: underline;
+.login-box h2, .signup-box h2 {
+    color:var(--text-light);
 }
 .login-box {
     background: #fff;
@@ -1191,9 +1240,16 @@ main p {
     cursor: pointer;
 
 }
+.light-mode .btn-login:hover, .dark-mode .btn-login:hover,
+.light-mode .btn-signup1:hover,
+.dark-mode .btn-signup1:hover{
+    color:var(--secondary-light);
+    text-decoration: underline;
+}
 .dark-mode .btn-login {
     margin: 0 15px;
-    color: var(--primary-dark); 
+    color: var(--background-light);
+    background-color: var(--primary-dark); 
     border: none;
     border-radius: 15px;
     padding: 10px 20px;
@@ -1203,24 +1259,25 @@ main p {
 }
 
 .light-mode .btn-signup1{
-    margin: 0;
+    margin: 0 15px;
     color:var(--background-light);
     background-color: var(--primary-light); 
     border: none;
     border-radius: 15px;
     padding: 10px 20px;
-    font-weight: 800;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease
 }
 
 .dark-mode .btn-signup1 {
     margin: 0 15px;
-    color: var(--primary-dark); 
+    color:var(--background-light);
+    background-color: var(--primary-dark);
     border: none;
     border-radius: 15px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease
 }
@@ -1278,21 +1335,20 @@ main p {
     cursor: pointer;
   }
 .light-mode .profile-popup h1 {
-    color: var(--primary-light);
+    color: var(--text-light);
     text-align: center;
   } 
 .dark-mode  .profile-popup h1 {
-    color: var(--primary-dark);
+    color: var(--text-light);
     text-align: center;
   } 
   .dark-mode  .profile-popup p {
+    padding: 10px;
     font-size: 20px;
-    color: var(--primary-dark);
   } 
 .light-mode .profile-popup p {
-    top: 50%;
+    padding: 10px;
     font-size: 20px;
-    color: var(--primary-light);
 }
 .light-mode .btn-logout2 {
     color: var(--background-light);
@@ -1328,4 +1384,62 @@ main p {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.burger-menu {
+    display: none; 
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.burger-button {
+    font-size: 24px;
+    background: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #e57171;
+}
+  
+#menu {
+    display: none;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 110px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: all 0,5s ease;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.light-mode #menu a {
+    display: block;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: var(--accent-light);
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.dark-mode #menu a {
+    display: block;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: var(--accent-dark);
+    margin: 10px 0;
+    font-size: 18px;
+}
+  
+  
+.hidden {
+    display: none;
+}
+  
+#menu:not(.hidden) {
+    display: block;
 }

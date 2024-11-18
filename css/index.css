@@ -246,6 +246,17 @@ main p {
     }
 }
   @media (max-width: 768px) {
+    .burger-menu {
+      display: block; 
+  }
+
+  header nav {
+      display: none; 
+  }
+
+  nav {
+      font-size: 16px; 
+  }
     .btn-login, .btn-logout, .btn-profile, .btn-signup1, .btn-logout2 {
       margin: 0 12px; /* Slightly more margin */
       padding: 10px 18px; /* Moderate padding */

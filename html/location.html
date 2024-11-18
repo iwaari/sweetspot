@@ -22,9 +22,9 @@
     </a>
     <nav class="navbar navbar-expand-lg" id="navbar">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
         
         <button id="theme-toggle" class="styled-button">Toggle Light/Dark Mode</button> 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -72,13 +72,24 @@
       </div>
     </nav>
   </header>
+
+  
+  <div class="burger-menu">
+    <button class="burger-button" onclick="toggleMenu()">☰</button>
+    <nav id="menu" class="hidden">
+      <a href="index.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="location.html">Location</a>
+      <a href="menu.html">Menu</a>
+    </nav>
+  </div>
   <div id="login-popup" class="overlay-container">
     <div class="login-box">
         <h2>✧ Login ✧</h2>
         <form class="form-container" name="login-form" onsubmit="handleLogin(event)">
             <input class="form-input" type="email" placeholder="Email" id="login-email" name="email" required>
             <input class="form-input" type="password" placeholder="Password" id="login-password" name="password" required>
-            <button class="btn-submit" type="submit">Submit</button>
+            <button class="btn-submit1" type="submit">Submit</button>
             <p>Not a member?</p>
             <button class="btn-signup" onclick="SignupPopup()">Signup now</button>
         </form>
@@ -99,7 +110,7 @@
           <input class="form-input" type="text" placeholder="Username" id="signup-username" name="username" required>
           <input class="form-input" type="email" placeholder="Email" id="signup-email" name="email" required>
           <input class="form-input" type="password" placeholder="Password" id="signup-password" name="password" required>
-          <button class="btn-submit" type="submit">Create Account</button>
+          <button class="btn-create" type="submit">Create Account</button>
       </form>
       <button class="btn-close-popup" onclick="SignupPopup()">
         <i class="fas fa-times"></i>
@@ -281,6 +292,7 @@
 <script src="../javascript/sweet.js"></script>
 <script src="../javascript/scrypt.js"></script>
 <script src="../javascript/form.js"></script>
+<script src="../javascript/burger.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
