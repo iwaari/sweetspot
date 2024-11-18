@@ -57,8 +57,8 @@
     background-image: url("css/tss.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    height: 40px;
-    width: 200px;
+    height: 100px;
+    width: 400px;
 } 
 
 #navbar {
@@ -216,8 +216,10 @@ nav a:hover {
 
 figure img {
     border-radius: 10px;
+    width: auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 main p {
     font-size: 1.2em;
     color: #4a4a4a;
@@ -632,17 +634,15 @@ main p {
 .overlay-container.show {
     display: block;
   }
-  
-.popup-box {
+
+  .popup-box {
     background: #fff;
-    padding: 20px;
+    padding: 30px 20px;
+    position: relative;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     width: 450px;
     text-align: center;
-    opacity: 0;
-    transform: scale(0.8);
-    animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .form-container {
@@ -667,16 +667,23 @@ main p {
     width: 100%;
     box-sizing: border-box;
 }
-
-.btn-submit,
-.btn-close-popup {
+.btn-close-popup2 {
+    background: transparent; /* Make background transparent */
+    border: none; /* Remove border */
+    color: #000; /* Set color */
+    font-size: 20px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer */
+    position: absolute; /* Position it absolutely */
+    top: 10px;
+    right: 10px; 
+}
+.btn-submit {
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .btn-submit {
     background-color:#e5a3a3;
     font-weight: 600;
@@ -695,8 +702,8 @@ main p {
     font-size: 20px; /* Set font size */
     cursor: pointer; /* Change cursor to pointer */
     position: absolute; /* Position it absolutely */
-    top: 10px; /* Distance from the top */
-    right: 10px; /* Distance from the right */
+    top: 10px;
+    right: 10px; 
 }
 
 #newsletter {
@@ -1238,17 +1245,6 @@ main p {
     font-size: 20px;
     padding-top: 30px;
 }
-@media (max-width: 991px) {
-    #navbar .navbar-nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .styled-button, .btn-login, .btn-signup1, .btn-logout {
-      margin: 10px;
-    }
-  }
 #viewmenu {
     background-color: var(--accent-light);
 }
