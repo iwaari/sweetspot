@@ -26,10 +26,9 @@ function formatDate(date) {
 
 
 document.getElementById("colorButton").addEventListener("click", function() {
-  const colors = ['#f8c3c3', '#f9e8c1', '#c1f9c6', '#c1d6f9', '#dcc1f9', '#f9c1d1'];
+  const colors = ['#D8D2C2', '#fff', '#ECDFCC', '#E7CCCC', '##7a5959', '#E7CCCC','#C39898'];
   document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 });
-
 
 //display greeting
 

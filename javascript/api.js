@@ -22,11 +22,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 const temperature = data.main.temp;
                 const weatherDescription = data.weather[0].description;
                 const humidity = data.main.humidity;
+
+                // Determine the message based on the temperature
+                let message = "";
+                if (temperature <= 15) {
+                    message = "Don't catch a cold! Buy yourself a sweet treat.";
+                } else if (temperature > 15) {
+                    message = "It's warm out! Treat yourself to a cold drink.";
+                }
+
+                // Display weather data and the message
                 const weatherHTML = `
                     <h2>${city}</h2>
                     <p>Temperature: ${temperature}°C</p>
                     <p>Condition: ${weatherDescription}</p>
                     <p>Humidity: ${humidity}%</p>
+                    <p><strong>${message}</strong></p>
                 `;
                 weatherContainer.innerHTML = weatherHTML;
             })

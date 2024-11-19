@@ -2,9 +2,9 @@ const menuItems = [
   { name: "Classic Croissant🥐", description: "A light, buttery croissant with crisp layers.", image: "../css/menu/classsic.svg", category: "croissants" },
   { name: "Almond Croissant🥐", description: "Croissant filled with sweet almond cream.", image: "../css/menu/almond1.svg", category: "croissants" },
   { name: "Chocolate Croissant🥐", description: "A buttery croissant with a rich chocolate center.", image: "../css/menu/choc.jfif", category: "croissants" },
-  { name: "Salted Caramel Cookie", description: "A cookie with a smooth caramel filling and a crispy top.", image: "../css/menu/caramelc.jfif", category: "cookies" },
+  { name: "Salted Caramel Cookie🍪", description: "A cookie with a smooth caramel filling and a crispy top.", image: "../css/menu/caramelc.jfif", category: "cookies" },
   { name: "Raspberry Cookie🍪", description: "A cookie with a sweet raspberry filling.", image: "../css/menu/raspc.jfif", category: "cookies" },
-  { name: "Chocolate Chip Cookie", description: "A cookie filled with blueberry jam.", image: "../css/menu/coocie.jfif", category: "cookies" },
+  { name: "Chocolate Chip Cookie🍪", description: "A cookie filled with blueberry jam.", image: "../css/menu/coocie.jfif", category: "cookies" },
   { name: "Choko Cookie🍪", description: "A crispy cookie with a smooth custard filling.", image: "../css/menu/chocc.jfif", category: "cookies" },
   { name: "Apple-pie Cookie🍪", description: "A cookie filled with cinnamon-spiced apples.", image: "../css/menu/apple-pie.jfif", category: "cookies" }
 ];
