@@ -22,7 +22,7 @@
     color:  var(--text-light);
     margin: 0;
     padding: 0;
-    transition: transform 0.3s ease-in-out;
+    transition: all 1s ease;
 }
 
 .dark-mode body { 
@@ -31,7 +31,7 @@
     color: var(--text-dark);
     margin: 0;
     padding: 0;
-    transition: transform 0.3s ease-in-out;
+    transition: all 1s ease;
 }
 
 
@@ -41,7 +41,7 @@
     align-items: center;
     background-color: var(--primary-light);
     padding: 20px 40px;
-    transition: transform 0.3s ease-in-out;
+    transition: all 1s ease;
 }
 
 .dark-mode header {
@@ -51,7 +51,7 @@
     align-items: center;
     background-color: var(--primary-dark);
     padding: 20px 40px;
-    transition: transform 0.3s ease-in-out;
+    transition: all 1s ease;
 }
 
 .logo {
@@ -90,7 +90,7 @@
     color: var(--primary-light);
     text-decoration: none;
     font-weight: 700;
-    transition: opacity 0.5s, max-height 0.5s, padding 0.5s;
+    transition: all 1s ease;
 }
 
 .dark-mode nav a {
@@ -98,22 +98,14 @@
     color: var(--primary-dark); 
     text-decoration: none;
     font-weight: 700;
-    transition: color 0.3s ease;
-}
-
-.light-mode navbar {
-    background-color: var(--primary-light);
-}
-
-.dark-mode .navbar {
-    background-color: var(--primary-dark);
+    transition: all 1s ease;
 }
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f7f4ef;
     color: #4a4a4a;
     margin: 0;
-    transition: transform 0.3s ease-in-out;
+    transition: all 1s ease;
     padding: 0;
 }
 .logo {
@@ -126,32 +118,18 @@ body {
 
 nav {
     display: flex;
-    transition: 0.2s;
+    transition: all 1s ease;
 }
 
-.light-mode nav a {
-    margin: 0 15px;
-    color: var(--primary-light);
-    text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
 
-.dark-mode nav a {
-    margin: 0 15px;
-    color: var(--primary-dark); 
-    text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
-
-.light-mode navbar {
+.light-mode .navbar {
     background-color: var(--primary-light);
-    transition: 0.2s;
+    transition: all 1s ease;
 }
 
 .dark-mode .navbar {
     background-color: var(--primary-dark);
+    transition: all 1s ease;
 }
 
 
@@ -174,7 +152,7 @@ nav {
 .navbar-nav .nav-link {
     color: #ffffff; 
     cursor: pointer;
-    transition: opacity 0.5s ease-in-out;
+    transition: all 1s ease;
     font-weight: 700; 
 }
 .working-hours {
@@ -218,7 +196,7 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
     text-align: center; 
-  transition: opacity 0.5s ease-in-out;
+    transition: all 1s ease;
 } 
 
 .dark-mode main {
@@ -230,7 +208,7 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
     text-align: center; 
-    transition: opacity 0.5s ease-in-out;
+    transition: all 1s ease;
 }
 
 figure img {
@@ -372,7 +350,7 @@ form {
 
 }
 
-.dark-mode main h5 {
+ h5 {
     color:#5b1a1a;
 
 }
@@ -1503,4 +1481,42 @@ background-color: var(--accent-light);
 
 .dark-mode  .menu-login-btn:hover {
     background-color: #5b1a1a; 
+}
+.dark-mode #search-button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: var(--accent-dark);
+    color: var(--background-light);
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 15px ;
+    border: none;
+
+}
+.dark-mode #search-button:hover {
+    background-color: var(--accent-light);
+    transform: scale(1.05); 
+}
+.light-mode #search-button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: var(--primary-light);
+    color: var(--background-light);
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 15px ;
+    border: none;
+
+}
+.light-mode #search-button:hover {
+    background-color: var(--accent-light);
+    transform: scale(1.05); 
+}
+#city-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 10px;
 }
