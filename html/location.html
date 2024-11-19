@@ -81,6 +81,7 @@
       <a href="about.html">About us</a>
       <a href="location.html">Location</a>
       <a href="menu.html">Menu</a>
+      <button class="menu-login-btn" onclick="LoginPopup()">Login</button>
     </nav>
   </div>
   <div id="login-popup" class="overlay-container">
@@ -96,11 +97,6 @@
         <button class="btn-close-popup" onclick="LoginPopup()">
           <i class="fas fa-times"></i>
       </button>
-      <!-- <li class="nav-item" id="profile-section" style="display: none;">
-        <button class="btn-profile" onclick="toggleProfilePopup()">
-          <i class="fas fa-user-circle"></i> Profile
-        </button>
-      </li> -->
       </div>
 </div>
 <div id="signup-popup" class="overlay-container">
@@ -186,40 +182,24 @@
       </div>
     </section>
     <section class="row mb-5">
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-6">
         <h2>Special Offers</h2>
         <p>Get the best deals for our bakery items.</p>
         <ul class="list-unstyled">
-          <li><strong>Buy 1 Get 1 Free:</strong> Available on select cookies.</li>
-          <li><strong>10% Off:</strong> On your first online order.</li>
-          <li><strong>Seasonal Discount:</strong> 20% off during the holiday season.</li>
+          <li><p><strong>Buy 1 Get 1 Free:</strong> Available on select cookies.</p></li>
+          <li><p><strong>10% Off:</strong> On your first online order.</p></li>
+          <li><p><strong>Seasonal Discount:</strong> 20% off during the holiday season.</p></li>
         </ul>
         <a href="menu.html" class="btn mt-2" id="viewmenu">View Menu</a>
       </div>
-  
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-        <h2>Contact Us</h2>
-        <div class="social-links">
-          <a href="https://www.instagram.com/yourprofile" target="_blank" class="me-3">
-              <i class="fab fa-instagram fa-2x"></i>
-          </a>
-          <a href="https://wa.me/87786163610" target="_blank" class="me-3">
-              <i class="fab fa-whatsapp fa-2x"></i>
-          </a>
-          <a href="https://telegram.org/yourphonenumber" target="_blank">
-              <i class="fab fa-telegram fa-2x"></i>
-          </a>
-      </div>
-        <p>Feel free to get in touch for custom orders.</p>
-      </div>
-  
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
         <h2>Working Hours</h2>
-        <button id="toggle-time">Show Current Time</button>
-    <div id="time-display" style="display: none;"></div>
-
-    
-        <p>We are open from 8 AM to 8 PM, Monday to Saturday.</p>
+    <ul class="working-hours"> 
+      <li><p>Monday to Friday: 8:00 AM - 8:00 PM</p></li>
+      <li><p>Saturday: 9:00 AM - 6:00 PM</p></li>
+      <li><p>Sunday: 9:00 AM - 4:00 PM</p></li>
+    </ul>
       </div>
     </section>
   </main>
@@ -230,14 +210,14 @@
       <span>Get connected with us on social networks:</span>
     </div>
  
-    <div class="social-links">
-      <a href="" class="text-white me-4">
-        <i class="fab fa-facebook-f"></i>
+    <div class="social-links d-flex">
+      <a href="https://telegram.org/87786163610" class="text-white me-4">
+        <i class="fab fa-telegram"></i>
       </a>
-      <a href="" class="text-white me-4">
+      <a href="https://wa.me/87786163610" class="text-white me-4">
         <i class="fab fa-whatsapp"></i>
       </a>
-      <a href="" class="text-white me-4">
+      <a href="https://www.instagram.com/sweetspot" class="text-white me-4">
         <i class="fab fa-instagram"></i>
       </a>
     </div>

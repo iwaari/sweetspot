@@ -69,6 +69,7 @@
 
 .team-member {
     width: 80%; /* Make team members narrower */
+    text-align: center;
     margin: 10px auto; /* Center them */
 }
 
@@ -199,6 +200,7 @@ main p {
     font-size: 14px; /* Reduce font size */
     text-align: center; /* Center-align text */
 }
+
       figure img {
         border-radius: 8px; /* Slightly smaller border-radius for smaller screens */
         width: 100%;
@@ -249,7 +251,6 @@ main p {
     .burger-menu {
       display: block; 
   }
-
   header nav {
       display: none; 
   }
@@ -383,7 +384,22 @@ iframe {
     max-width: 100%; /* Make iframe responsive */
     height: 300px; /* Adjust height */
 }
+.navbar-nav {
+    display: none; /* Hide normal navbar items on small screens */
+  }
 
+  .burger-menu {
+    display: block; /* Show burger menu */
+  }
+
+  #auth-buttons {
+    display: none; /* Hide login/signup buttons outside burger on small screens */
+  }
+
+  #profile-section {
+    display: none; /* Hide profile button outside burger on small screens */
+  }
+  
   .profile-popup {
       width: 80%; /* Make it slightly smaller */
       height: auto;
@@ -452,6 +468,8 @@ iframe {
       flex-direction: column; /* Stack team members vertically */
       margin: 30px 0;
       padding: 30px 0;
+      justify-content: center; /* Horizontally center the images */
+      align-items: center; 
   }
 
   .team-member {

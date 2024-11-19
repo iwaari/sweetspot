@@ -22,10 +22,6 @@
     </a>
     <nav class="navbar navbar-expand-lg" id="navbar">
       <div class="container-fluid">
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-        
         <button id="theme-toggle" class="styled-button">Toggle Light/Dark Mode</button> 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
@@ -64,7 +60,6 @@
               <button class="btn-logout2" onclick="logout()">Logout</button>
             </div>
           </div>
-      
         </div>
       </div>
     </nav>
@@ -73,12 +68,14 @@
   <div class="burger-menu">
     <button class="burger-button" onclick="toggleMenu()">☰</button>
     <nav id="menu" class="hidden">
-      <a href="index.html">Home</a>
-      <a href="about.html">About us</a>
-      <a href="location.html">Location</a>
-      <a href="menu.html">Menu</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="location.html">Location</a>
+        <a href="menu.html">Menu</a>
+        <button class="menu-login-btn" onclick="LoginPopup()">Login</button>
     </nav>
-  </div>
+</div>
+</div>
 
   <div id="login-popup" class="overlay-container">
     <div class="login-box">
@@ -270,7 +267,7 @@
       <span>Get connected with us on social networks:</span>
     </div>
  
-    <div class="social-links">
+    <div class="social-links d-flex">
       <a href="" class="text-white me-4">
         <i class="fab fa-facebook-f"></i>
       </a>
@@ -321,7 +318,6 @@
       <p><i class="fas fa-print mr-2"></i> +7 778 996 00 00</p>
     </div>
   </footer>
-  </div>
 <div class="text-center my-3">
   <button id="colorButton" class="btn btn-custom mt-3">Change Background Color</button>
 </div>

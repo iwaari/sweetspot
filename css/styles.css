@@ -3,6 +3,7 @@
     --background-light: #ffffff;
     --primary-light: #e5a3a3;
     --secondary-light: #e57171;
+    --third-light: #d89494;
     --accent-light: #ba7070;
 
     --text-dark: #eae9fc;
@@ -70,6 +71,14 @@
 .dark-mode #socialmed {
     background-color: var(--primary-dark);
     width: 100%;
+}
+.dark-mode #socialmed span {
+    color: var(--background-light);
+    font-size: 20px;
+}
+.light-mode #socialmed span {
+    color: var(--background-light);
+    font-size: 20px;
 }
 .light-mode #socialmed {
     background-color: var(--primary-light);
@@ -168,7 +177,17 @@ nav {
     transition: opacity 0.5s ease-in-out;
     font-weight: 700; 
 }
+.working-hours {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    text-align: center;
 
+}
+.list-unstyled {
+    text-align: center;
+
+}
 
 .light-mode .navbar-nav .nav-link:hover {
     text-decoration: underline; 
@@ -465,17 +484,12 @@ main p {
       
 .social-links {
         background-color: none;
-        text-align: center; /* Center the text and links */
-        padding: 20px 0; /* Add some padding for spacing */
+        text-align: center;
+        padding: 20px 0;
+        align-items: center;
     }
-/* .dark-mode span {
-    font-size: 20px;
-    text-align: center;
-
-} */
-    
 .light-mode .social-links a {
-        color: #d89494;
+        color: var(--third-light);
         margin: 0 15px; /* Space between links */
         text-decoration: none;
         font-size: 30px;
@@ -890,19 +904,18 @@ background-color: var(--accent-light);
     background-color: var(--accent-dark )!important; 
     transform: scale(0.98); 
 }
-.light-mode #datetime {
-    font-size: 16px;
-    font-weight: 300;
-    font-family: 'Roboto', sans-serif;
-    color:var(--secondary-light);
-    
+.light-mode .datetime-cont{
+    background-color: var(--primary-light);
 }
-.dark-mode #datetime {
+.dark-mode .datetime-cont{
+    background-color: var(--primary-dark);
+}
+#datetime {
     font-size: 16px;
     font-weight: 300;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
-    color: var(--background-light);
-    
+    color:var(--background-light);
 }
 #time-display {
     font-size: 1.5rem;
@@ -944,8 +957,18 @@ background-color: var(--accent-light);
     font-family: 'Roboto', sans-serif;
 }
   
-#getQuoteButton {
-    background-color: #e5a3a3; /* Match the custom background color */
+.light-mode #getQuoteButton {
+    background-color: var(--primary-light); /* Match the custom background color */
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.dark-mode #getQuoteButton {
+    background-color: var(--primary-dark); /* Match the custom background color */
     color: #ffffff;
     padding: 10px 25px;
     border-radius: 16px;
@@ -955,11 +978,14 @@ background-color: var(--accent-light);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
   
-#getQuoteButton:hover {
-    background-color: #ba7070; /* Same hover effect */
+.light-mode #getQuoteButton:hover {
+    background-color: var(--accent-light); /* Same hover effect */
     transform: scale(1.05);
 }
-  
+.dark-mode #getQuoteButton:hover {
+    background-color: var(--accent-dark); /* Same hover effect */
+    transform: scale(1.05);
+}  
 #getQuoteButton:active {
     background-color: #ba7070; /* Same active effect */
     transform: scale(0.98);
@@ -990,9 +1016,11 @@ background-color: var(--accent-light);
   
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px; /* Slight rounding for smoother look */
+    border-radius: 10px; 
     overflow: hidden;
+    height: 500px !important;
 }
+
 .card img {
     border-radius: 10px;
 }  
@@ -1442,4 +1470,37 @@ background-color: var(--accent-light);
   
 #menu:not(.hidden) {
     display: block;
+}
+.light-mode .menu-login-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 8px 15px;
+    font-size: 16px;
+    color: #fff; 
+    background-color: #e5a3a3; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dark-mode .menu-login-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 8px 15px;
+    font-size: 16px;
+    color: #fff; 
+    background-color: #5b1a1a; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+  
+.light-mode  .menu-login-btn:hover {
+    background-color: #e5a3a3; 
+}
+
+.dark-mode  .menu-login-btn:hover {
+    background-color: #5b1a1a; 
 }

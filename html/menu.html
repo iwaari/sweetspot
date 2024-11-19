@@ -21,10 +21,6 @@
     </a>
     <nav class="navbar navbar-expand-lg" id="navbar">
       <div class="container-fluid">
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-        
         <button id="theme-toggle" class="styled-button">Toggle Light/Dark Mode</button> 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
@@ -48,9 +44,6 @@
                 Sign Up</button>
           </li>
           <li class="nav-item" id="profile-section" style="display: none;">
-            <!-- <button class="btn-logout" onclick="logout()">
-              <i class="fas fa-sign-out-alt"></i> Logout
-            </button> -->
             <button class="btn-profile" onclick="toggleProfilePopup()">
               <i class="fas fa-user-circle"></i> Profile
             </button>
@@ -80,6 +73,7 @@
       <a href="about.html">About us</a>
       <a href="location.html">Location</a>
       <a href="menu.html">Menu</a>
+      <button class="menu-login-btn" onclick="LoginPopup()">Login</button>
     </nav>
   </div>
   <div id="login-popup" class="overlay-container">
@@ -140,7 +134,7 @@
       <span>Get connected with us on social networks:</span>
     </div>
  
-    <div class="social-links">
+    <div class="social-links d-flex">
       <a href="" class="text-white me-4">
         <i class="fab fa-facebook-f"></i>
       </a>
