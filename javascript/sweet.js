@@ -105,37 +105,28 @@ function clearErrors() {
 
 //Handle form submission
 document.getElementById('order').addEventListener('submit', function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
+    
     if (validateCurrentStep()) {
         const formData = new FormData(event.target);
         console.log('Form Data Submitted:', Object.fromEntries(formData));
         alert('Order submitted successfully!');
+        
+        // Clear the form after successful submission
+        event.target.reset();
+        
+        // Reset the steps to the first step
+        currentStep = 0;
+        showStep(currentStep);
     }
 });
+
 
 //popup
   function togglePopup() {
     const overlay = document.getElementById('popupOverlay');
     overlay.classList.toggle('show');
 }
-//button show time
-const button = document.getElementById('toggle-time');
-const timeDisplay = document.getElementById('time-display');
-let isTimeVisible = false;  
-
-button.addEventListener('click', function() {
-    if (!isTimeVisible) {
-        const currentTime = new Date().toLocaleTimeString();
-        timeDisplay.textContent = `Current Time: ${currentTime}`;
-        timeDisplay.classList.add('show'); // Add the show class
-        isTimeVisible = true;
-        button.textContent = 'Hide Current Time';  
-    } else {
-        timeDisplay.classList.remove('show'); // Remove the show class
-        isTimeVisible = false;
-        button.textContent = 'Show Current Time'; 
-    }
-});
 
 
 //sound effect

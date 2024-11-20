@@ -3,27 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Sweet Spot | About Us</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <title>The Sweet Spot | About us</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="icon" type="image/svg" href="css/favicon.svg"> 
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="icon" type="image/svg" href="css/favicon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="../javascript/darkmode.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../server.js"></script>
+  <script src="../javascript/burger.js" defer=""></script>
 </head>
 <body>
-
+  <div id="page-container">
   <header>
-    <a class="navbar-brand" href="home.html">
+    <a class="navbar-brand" href="index.html">
       <div class="logo"></div>
     </a>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" id="navbar">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <button id="theme-toggle" class="styled-button">Toggle Light/Dark Mode</button> 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="home.html">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
@@ -38,25 +41,49 @@
               <button class="btn-login" onclick="LoginPopup()">
                   <i class="fas fa-user"></i> Log in
               </button>
-              <button class="btn-signup1" onclick="SignupPopup()">Sign Up</button>
+              <button class="btn-signup1" onclick="SignupPopup()">
+                Sign Up</button>
           </li>
           <li class="nav-item" id="profile-section" style="display: none;">
-              <button class="btn-logout" onclick="logout()">
-                  <i class="fas fa-sign-out-alt"></i> Logout
-              </button>
+            <button class="btn-profile" onclick="toggleProfilePopup()">
+              <i class="fas fa-user-circle"></i> Profile
+            </button>
           </li>
+          
           </ul>
+          <div id="profile-popup" class="profile-popup" style="display: none;">
+            <div class="profile-popup-content">
+              <span class="close" onclick="toggleProfilePopup()">&times;</span>
+              <h1>User Information</h1>
+              <p id="profile-username"></p>
+              <p id="profile-email"></p>
+              <button class="btn-logout2" onclick="logout()">Logout</button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
   </header>
+
+  <div class="burger-menu">
+    <button class="burger-button" onclick="toggleMenu()">☰</button>
+    <nav id="menu" class="hidden">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="location.html">Location</a>
+        <a href="menu.html">Menu</a>
+        <button class="menu-login-btn" onclick="LoginPopup()">Login</button>
+    </nav>
+</div>
+</div>
+
   <div id="login-popup" class="overlay-container">
     <div class="login-box">
         <h2>✧ Login ✧</h2>
         <form class="form-container" name="login-form" onsubmit="handleLogin(event)">
             <input class="form-input" type="email" placeholder="Email" id="login-email" name="email" required>
             <input class="form-input" type="password" placeholder="Password" id="login-password" name="password" required>
-            <button class="btn-submit" type="submit">Submit</button>
+            <button class="btn-submit1" type="submit">Submit</button>
             <p>Not a member?</p>
             <button class="btn-signup" onclick="SignupPopup()">Signup now</button>
         </form>
@@ -72,7 +99,7 @@
           <input class="form-input" type="text" placeholder="Username" id="signup-username" name="username" required>
           <input class="form-input" type="email" placeholder="Email" id="signup-email" name="email" required>
           <input class="form-input" type="password" placeholder="Password" id="signup-password" name="password" required>
-          <button class="btn-submit" type="submit">Create Account</button>
+          <button class="btn-create" type="submit">Create Account</button>
       </form>
       <button class="btn-close-popup" onclick="SignupPopup()">
         <i class="fas fa-times"></i>
@@ -83,32 +110,37 @@
 
   <main class="container my-5">
     <section>
+      <div id="greeting-section" style="display: none;">
+        <h2>Hello, <span id="main-username"></span>!</h2>
+    </div>
+    
       <h2 class="mb-4">♡ Our Story ♡</h2>
       <figure>
         <img src="../css/member/me.jfif">
       </figure>
-      <p class="mb-4">Welcome to Sweet Spot Bakery, where passion for baking and a love for community come together.Our journey began with a simple idea – to create a warm, welcoming place where people can enjoy freshly baked treats made from the finest ingredients. What started as a small kitchen experiment has grown into a beloved neighborhood bakery, where every pastry, cake, and loaf of bread is handcrafted with care.</p>
+      <p class="mb-4">⠀⠀⠀⠀Welcome to Sweet Spot Bakery, where passion for baking and a love for community come together.Our journey began with a simple idea – to create a warm, welcoming place where people can enjoy freshly baked treats made from the finest ingredients. What started as a small kitchen experiment has grown into a beloved neighborhood bakery, where every pastry, cake, and loaf of bread is handcrafted with care.</p>
       
-      <p>At Sweet Spot, we believe that food brings people together, and every bite should tell a story. From our flaky croissants to our decadent cakes, each recipe has been thoughtfully developed to capture the perfect balance of flavor and texture. Our bakers are dedicated to using time-honored techniques, ensuring that every product we make is as delicious as it is beautiful.</p>
+      <p>⠀⠀⠀⠀At Sweet Spot, we believe that food brings people together, and every bite should tell a story. From our flaky croissants to our decadent cakes, each recipe has been thoughtfully developed to capture the perfect balance of flavor and texture. Our bakers are dedicated to using time-honored techniques, ensuring that every product we make is as delicious as it is beautiful.</p>
         
-      <p>But it’s not just about the food – it’s about creating a space where people can connect and savor life’s sweet moments. Whether you’re grabbing your morning coffee, catching up with friends, or celebrating a special occasion, Sweet Spot Bakery is here to make it memorable.</p>
+      <p>⠀⠀⠀⠀But it’s not just about the food – it’s about creating a space where people can connect and savor life’s sweet moments. Whether you’re grabbing your morning coffee, catching up with friends, or celebrating a special occasion, Sweet Spot Bakery is here to make it memorable.</p>
         
-      <p>Thank you for being part of our journey. We can’t wait to serve you.</p>
+      <p>⠀⠀⠀⠀Thank you for being part of our journey. We can’t wait to serve you.</p>
       
-      <blockquote class="blockquote p-4 mb-4">
-        "We believe in the power of food to bring people together. Every pastry is a celebration of life's sweet moments."
-      </blockquote>
+    
     </section>
     <h2>Contact</h2>
-    <p>There are many ways we can keep in touch. Subscribe via email to have recipes sent straight to your inbox for free. You can also email anytime sweetspot@gmail.com</p>
-    <p>Have a question for my team and I? You’ll find these most Frequently Asked Questions helpful. If you have a question about a specific recipe, please review the comments on that post. If your question hasn’t been answered, feel free to continue the conversation by leaving a comment or question directly in that post.</p>
-    <h5>Subscribe to our newsletter to be the first to know about exclusive offers, new products, and delicious surprises. We promise to send only the good stuff</h5>
+    <p>⠀⠀⠀⠀There are many ways we can keep in touch. Subscribe via email to have recipes sent straight to your inbox for free. You can also email anytime sweetspot@gmail.com</p>
+    <p>⠀⠀⠀⠀Have a question for my team and I? You’ll find these most Frequently Asked Questions helpful. If you have a question about a specific recipe, please review the comments on that post. If your question hasn’t been answered, feel free to continue the conversation by leaving a comment or question directly in that post.</p>
+    <h5>⠀⠀⠀⠀Subscribe to our newsletter to be the first to know about exclusive offers, new products, and delicious surprises. We promise to send only the good stuff</h5>
 
     <button class="btn-open-popup" onclick="togglePopup()">
-      <img src="../css/Subtract.png">
+      <img src="../css/Group 4.png">
     </button>
     <div id="popupOverlay" class="overlay-container">
       <div class="popup-box">
+        <button class="btn-close-popup2" onclick="togglePopup()">
+          <i class="fas fa-times"></i>
+      </button>
           <h2>Be Part of Our Baking Journey!</h2>
           <form class="form-container">
               <label class="form-label" for="name">Username:</label>
@@ -117,9 +149,7 @@
               <input class="form-input" type="email" placeholder="Your Email" id="popup-email" name="email" required>
               <button class="btn-submit" type="submit">Submit</button>
           </form>
-          <button class="btn-close-popup" onclick="togglePopup()">
-            <i class="fas fa-times"></i>
-        </button>
+          
         
       </div>
   </div>
@@ -128,18 +158,39 @@
     
     <h2 class="mb-5">❀ Meet Our Team ❀</h2>
     <div class="row">
-      <div class="col-md-6 mb-4">
-        <p>Sweet Spot Bakery is powered by the passion and creativity of two lifelong friends, Arailym and Zhansaya...</p>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="team">
-          <div class="team-member mb-3">
-            <img src="../css/member/cat.jfif" alt="Main baker" class="img-fluid">
+      <div class="col-md-12">
+        <div class="team d-flex flex-wrap justify-content-center">
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/cat.jfif" alt="Main baker" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
             <p>Main baker</p>
           </div>
-          <div class="team-member">
-            <img src="../css/member/baker.jfif" alt="Baker" class="img-fluid">
-            <p>Baker</p>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/baker.jfif" alt="Baker" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Master Baker</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/pastrychef.jfif" alt="Pastry Chef" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Baker technologist</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/Admin.jfif" alt="Decorator" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Administrator</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/Conditer.jfif" alt="Assistant Chef" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Confectioner</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/Bugalter.jfif" alt="Sous Chef" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Accountant</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/Manager.jfif" alt="Manager" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Manager</p>
+          </div>
+          <div class="team-member mb-4 text-center mx-3">
+            <img src="../css/member/Salesman.jfif" alt="Barista" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>Salesman</p>
           </div>
         </div>
       </div>
@@ -204,64 +255,80 @@
     </section> 
 
     <div id="toggleDiv" class="content-box">
-      <p>This is a content box that can be hidden or shown with a smooth transition.</p>
+      <p>Croissant your fingers and open for a treat! ᵔ ᵕ ᵔ</p>
     </div>
     
     <button id="toggleVisibilityButton" class="btn-custom">Toggle Visibility</button>
 
   </main>
-
-  <footer class="container-fluid d-flex justify-content-between align-items-start p-4">
-    <div class="col-md-4 d-flex flex-column align-items-start">
-        <h3>Be Part of Our Baking Journey!</h3>
-        <p>Don't miss out on exclusive updates and sweet surprises.</p>
-        <form id="newsletter" class="p-4 rounded-3 w-100">
-            <div class="mb-3">
-                <input type="text" class="form-control" id="footer-name1" placeholder="Your name" name="name" required>
-            </div>
-            <div class="mb-3">
-                <input type="email" class="form-control" id="footer-email1" placeholder="Your email" name="email" required>
-            </div>
-            <button type="submit" class="btn btn-light btn-lg w-100">Join</button>
-            <p class="small">We won't send you spam. Unsubscribe at any time.</p>
-        </form>
+  <section class="d-flex justify-content-between p-4 w-100" id="socialmed">
+    
+    <div class="me-5 align-content-center">
+      <span>Get connected with us on social networks:</span>
     </div>
-    <div class="col-md-4 text-center">
+ 
+    <div class="social-links d-flex">
+      <a href="https://telegram.org/87786163610" class="text-white me-4">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://wa.me/87786163610" class="text-white me-4">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/sweetspot" class="text-white me-4">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+  </section>
+  <footer class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-start p-4">
+    <!-- Newsletter Subscription Section -->
+    <div class="col-12 col-md-4 d-flex flex-column align-items-start mb-4 mb-md-0">
+      <h3>Be Part of Our Baking Journey!</h3>
+      <p>Don't miss out on exclusive updates and sweet surprises.</p>
+      <form id="newsletter" class="p-4 rounded-3 w-100">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="footer-name1" placeholder="Your name" name="name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" id="footer-email1" placeholder="Your email" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-light btn-lg w-100">Join</button>
+        <p class="small mt-2">We won't send you spam. Unsubscribe at any time.</p>
+      </form>
+    </div>
+  
+    <!-- Quick Links Section -->
+    <div class="col-12 col-md-4 text-center mb-4 mb-md-0" >
       <h3>Quick Links</h3>
-      <div class="link-list">
-        <a href="home.html" class="link-item d-block">Home</a>
-        <a href="about.html" class="link-item d-block">About us</a>
-        <a href="location.html" class="link-item d-block">Location</a>
+      <div class="link-list d-flex flex-column align-items-center">
+        <a href="index.html" class="link-item d-block mb-2">Home</a>
+        <a href="about.html" class="link-item d-block mb-2">About Us</a>
+        <a href="location.html" class="link-item d-block mb-2">Location</a>
         <a href="menu.html" class="link-item d-block">Menu</a>
       </div>
     </div>
-    <div class="col-md-4 text-center">
-        <h3>Contact Us</h3>
-        <div class="social-links">
-            <a href="https://www.instagram.com/yourprofile" target="_blank" class="me-3">
-                <i class="fab fa-instagram fa-2x"></i>
-            </a>
-            <a href="https://wa.me/87786163610" target="_blank" class="me-3">
-                <i class="fab fa-whatsapp fa-2x"></i>
-            </a>
-            <a href="https://telegram.org/yourphonenumber" target="_blank">
-                <i class="fab fa-telegram fa-2x"></i>
-            </a>
-        </div>
+  
+    <!-- Contact Information Section -->
+    <div class="col-12 col-md-4 text-center" id="contact-us">
+      <h3>Contact</h3>
+      <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"/>
+      <p><i class="fas fa-home mr-2"></i> Astana, KZ 10012, Kz</p>
+      <p><i class="fas fa-envelope mr-2"></i> sweetspot@gmail.com</p>
+      <p><i class="fas fa-phone mr-2"></i> +7 778 999 00 00</p>
+      <p><i class="fas fa-print mr-2"></i> +7 778 996 00 00</p>
     </div>
-</footer>
-
+  </footer>
 <div class="text-center my-3">
   <button id="colorButton" class="btn btn-custom mt-3">Change Background Color</button>
 </div>
-
 <div class="credits text-center mt-3">
   <p>&copy; 2024 The Sweet Spot | Created by Kuvanich Zhansaya and Kairanbay Arailym |</p>
 </div>
 
 <script src="../javascript/sweet.js"></script>
 <script src="../javascript/scrypt.js"></script>
-<script src="../javascript/randomq.js"></script>
-<script src="../server.js"></script>
+<script src="../javascript/randomq.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

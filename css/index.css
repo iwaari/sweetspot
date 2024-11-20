@@ -1,0 +1,562 @@
+@media (max-width: 575px) {
+  
+  .login-box, .signup-box {
+    width: 100%; 
+    padding: 15px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.styled-button {
+    padding: 6px 12px; /* Smaller padding for buttons */
+    font-size: 14px; /* Reduce the font size for buttons */
+    border-radius: 10px; /* Slightly reduce the rounding */
+}
+
+.accordion {
+    width: 100%; /* Make accordions take full width */
+    padding: 14px; /* Reduce padding for a more compact design */
+    font-size: 16px; /* Adjust font size */
+}
+
+#quoteDisplay {
+    font-size: 20px; /* Slightly smaller font size for quotes */
+    margin-bottom: 15px; /* Reduce space below the text */
+}
+
+.content-box {
+    padding: 15px; /* Reduce padding */
+    font-size: 14px; /* Adjust text size */
+}
+
+#toggleDiv {
+    max-height: 150px; /* Reduce max height */
+}
+
+/* Additional tweaks */
+.btn-login, .btn-signup {
+    font-size: 14px; /* Smaller font size */
+    padding: 6px 18px; /* Compact button padding */
+}
+
+/* Adjust text alignment for smaller screens */
+#greeting, #randomQuoteSection {
+    text-align: left; /* Align text to the left if necessary */
+    font-size: 16px; /* Smaller text size */
+}
+  .accordion, .panel, .card {
+    width: 100%; /* Make elements full width */
+    font-size: 0.9em; /* Reduce font size */
+}
+.form-container {
+    padding: 10px; /* Decrease padding */
+}
+  #nextb, #nextb2, #backb, #backb2, #finish {
+    width: 100%; /* Full width for buttons on smaller screens */
+    font-size: 16px; /* Reduce font size */
+}
+
+#order .form input[type="submit"] {
+    font-size: 0.9em; /* Reduce font size for smaller screens */
+    padding: 8px 16px; /* Adjust padding */
+}
+
+.team {
+    flex-direction: column; /* Stack team members vertically */
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.team-member {
+    width: 80%; /* Make team members narrower */
+    text-align: center;
+    margin: 10px auto; /* Center them */
+}
+
+.seasonal-menu {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 10px; /* Smaller gap */
+    padding: 20px 10px;
+}
+
+.smenu-item img {
+    height: 200px; /* Reduce image height */
+}
+
+main p {
+    font-size: 1em; /* Smaller font size */
+    padding: 5px 20px; /* Reduce padding */
+}
+
+.btn-open-popup img {
+    width: 80px; /* Smaller image size */
+}
+
+.popup-box {
+    width: 90%; /* Make popup box almost full width */
+}
+
+.popup-box h2 {
+  font-size: 1.3rem;
+}
+
+.form-input {
+  font-size: 0.9rem;
+  padding: 8px;
+}
+
+.btn-submit {
+  font-size: 0.9rem;
+  padding: 8px 15px;
+}
+.form-label {
+    font-size: 14px; /* Reduce font size */
+}
+
+.form-input {
+    font-size: 14px; /* Reduce input font size */
+    padding: 8px; /* Adjust padding */
+}
+  /* Adjust the main container */
+  main {
+      padding: 15px;
+      margin: 15px auto;
+  }
+
+  /* Adjust the form */
+  form {
+      width: 95%; /* Use almost full screen width */
+      padding: 15px; /* Reduce padding */
+      margin: 15px auto; /* Center the form */
+      border-radius: 6px; /* Adjust border radius */
+  }
+
+  /* Adjust input fields and text areas */
+  .form input[type="text"],
+  .form input[type="email"],
+  .form textarea {
+      font-size: 0.9em; /* Smaller font size */
+      padding: 6px; /* Reduce padding */
+      margin-bottom: 10px; /* Reduce margin */
+  }
+
+  /* Adjust labels */
+  #order .form label {
+      font-size: 0.9em; /* Smaller label font size */
+      margin-bottom: 4px;
+  }
+
+  /* Adjust header */
+  header {
+      flex-direction: column;
+      padding: 8px 15px; /* Reduce padding further */
+  }
+
+  /* Adjust the logo */
+  .logo {
+      width: 120px; /* Smaller logo size */
+      height: 25px;
+  }
+
+  /* Adjust navigation */
+  nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px; /* Smaller gap between items */
+  }
+
+  nav a {
+      font-size: 0.8em; /* Smaller font size */
+      margin: 3px 0; /* Smaller margin */
+  }
+
+  /* Adjust buttons */
+  .btn-submit {
+      width: 100%;
+      padding: 10px; /* Smaller padding */
+      font-size: 0.9em; /* Smaller font size */
+  }
+
+  /* Adjust main headings */
+  main h2,
+  .section-heading {
+      font-size: 1.3em; /* Smaller font size */
+      margin: 15px 0; /* Adjust margins */
+  }
+
+  /* Adjust iframe */
+  iframe {
+      max-width: 100%;
+      height: 250px; /* Smaller height */
+  }
+  #getQuoteButton {
+    background-color: #e5a3a3; /* Keep the same color */
+    color: #ffffff;
+    padding: 8px 20px; /* Reduce padding for smaller screens */
+    border-radius: 12px; /* Slightly smaller border radius */
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px; /* Reduce font size */
+    text-align: center; /* Center-align text */
+}
+
+      figure img {
+        border-radius: 8px; /* Slightly smaller border-radius for smaller screens */
+        width: 100%;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); /* Reduced box-shadow for smaller screens */
+    }
+      .btn-login, .btn-logout, .btn-profile, .btn-signup1, .btn-logout2 {
+        margin: 0 8px; /* Reduce margin */
+        padding: 8px 16px; /* Compact padding */
+        font-size: 14px; /* Smaller font for buttons */
+    }
+
+    .profile-popup {
+        width: 90%; /* Take full width of screen */
+        height: auto; /* Adjust height automatically */
+        padding: 15px;
+    }
+
+    .profile-popup h1, .profile-popup p {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .btn-logout2 {
+        width: 100%; /* Make logout button take full width */
+        bottom: 10px; /* Adjust position */
+    }
+
+    /* .login-box, .signup-box {
+        width: 100%;
+        padding: 15px;
+    } */
+
+    /* Reduce padding in text areas */
+    .light-mode #contact-us p, .dark-mode #contact-us p {
+        font-size: 14px;
+        text-align: left; /* Align text to the left */
+    }
+
+    .light-mode h3, .light-mode h4, .dark-mode h3, .dark-mode h4 {
+        font-size: 18px; /* Smaller font for headings */
+    }
+
+    /* Adjust useful link */
+    .light-mode #useful-link a, .dark-mode #useful-link a {
+        font-size: 18px;
+    }
+}
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block; 
+  }
+  header nav {
+      display: none; 
+  }
+
+  nav {
+      font-size: 16px; 
+  }
+    .btn-login, .btn-logout, .btn-profile, .btn-signup1, .btn-logout2 {
+      margin: 0 12px; /* Slightly more margin */
+      padding: 10px 18px; /* Moderate padding */
+      font-size: 15px; /* Moderate font size */
+  }
+
+  .light-mode footer {
+    padding: 15px 10px;
+    font-size: 14px; /* Adjust font size for better readability */
+    text-align: center; /* Center-align text for a cleaner look */
+}
+.dark-mode footer {
+    padding: 10px 5px;
+    font-size: 14px; /* Adjust font size */
+    text-align: center;
+}
+
+  .popup-box {
+    position: relative;
+      width: 90%; /* Make the popup box almost full width on smaller screens */
+      padding: 20px 15px; /* Adjust padding to fit smaller screens */
+      border-radius: 8px; /* Slightly reduce the border radius */
+  }
+
+  .form-container {
+      flex-direction: column; /* Ensure form elements stack vertically */
+      text-align: left; /* Align text to the left for better readability */
+  }
+
+  .form-label {
+      font-size: 14px; /* Decrease the label font size */
+  }
+
+  .form-input {
+      font-size: 14px; /* Decrease the input font size */
+      padding: 10px; /* Reduce padding for a better fit */
+  }
+
+  .btn-submit {
+      font-size: 16px; /* Adjust button font size */
+      padding: 10px 15px; /* Adjust button padding */
+      width: 100%; /* Make the button full width */
+  }
+
+  .btn-close-popup2 {
+      font-size: 18px; /* Adjust font size for close button */
+      top: 8px; /* Adjust top position */
+      right: 8px; /* Adjust right position */
+  }
+/* Adjust the main container */
+main {
+    padding: 20px;
+    margin: 20px auto;
+}
+
+/* Adjust the form */
+form {
+    width: 90%; /* Make the form take up most of the screen width */
+    padding: 20px; /* Reduce padding */
+    margin: 20px auto; /* Center the form */
+    border-radius: 8px; /* Adjust border radius for a more compact look */
+}
+
+/* Adjust input fields and text areas */
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    font-size: 1em; /* Reduce font size */
+    padding: 8px; /* Reduce padding */
+    margin-bottom: 15px; /* Reduce margin */
+}
+
+/* Adjust labels */
+#order .form label {
+    font-size: 1em; /* Reduce label font size */
+    margin-bottom: 5px;
+}
+
+/* Adjust header */
+header {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 10px 20px; /* Reduce padding */
+}
+
+/* Adjust the logo */
+.logo {
+    width: 150px; /* Reduce logo size */
+    height: 30px; /* Reduce height */
+}
+
+/* Adjust navigation */
+nav {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center;
+    gap: 10px; /* Add space between items */
+}
+
+nav a {
+    font-size: 0.9em; /* Reduce font size */
+    margin: 5px 0; /* Adjust margin for links */
+}
+
+/* Adjust buttons */
+.btn-submit {
+    width: 100%; /* Make button full width */
+    padding: 12px; /* Adjust padding */
+    font-size: 1em; /* Adjust font size */
+}
+
+.navbar-toggler-icon {
+    width: 30px; /* Adjust the size of the toggler icon */
+    height: 30px;
+}
+
+/* Adjust main headings */
+main h2,
+.section-heading {
+    font-size: 1.5em; /* Reduce font size */
+    margin: 20px 0; /* Adjust margins */
+}
+
+/* Adjust iframe */
+iframe {
+    max-width: 100%; /* Make iframe responsive */
+    height: 300px; /* Adjust height */
+}
+.navbar-nav {
+    display: none; /* Hide normal navbar items on small screens */
+  }
+
+  .burger-menu {
+    display: block; /* Show burger menu */
+  }
+
+  #auth-buttons {
+    display: none; /* Hide login/signup buttons outside burger on small screens */
+  }
+
+  #profile-section {
+    display: none; /* Hide profile button outside burger on small screens */
+  }
+  
+  .profile-popup {
+      width: 80%; /* Make it slightly smaller */
+      height: auto;
+      padding: 20px;
+  }
+
+  .profile-popup h1, .profile-popup p {
+      font-size: 18px; /* Adjust text size for better readability */
+  }
+
+  /* .login-box, .signup-box {
+      width: 90%;
+      padding: 20px;
+  } */
+
+  /* Adjust text sizes for smaller screens */
+  .light-mode #contact-us p, .dark-mode #contact-us p {
+      font-size: 15px;
+      text-align: center; /* Center align text on larger screens */
+  }
+
+  .light-mode h3, .light-mode h4, .dark-mode h3, .dark-mode h4 {
+      font-size: 20px; /* Medium font for headings */
+  }
+
+  /* Adjust useful link for medium-sized screens */
+  .light-mode #useful-link a, .dark-mode #useful-link a {
+      font-size: 18px;
+  }
+
+  .btn-logout2 {
+      width: 150px; /* Reduce width */
+      bottom: 20px; /* Keep it positioned at the bottom */
+  }
+    /* .login-box, .signup-box {
+      width: 90%; 
+      padding: 20px 10px; 
+  } */
+  .styled-button {
+      padding: 8px 16px; /* Adjust button size */
+      font-size: 14px; /* Reduce font size */
+  }
+    /* Adjustments for medium screens */
+    .team {
+      flex-direction: column; /* Stack team members vertically */
+  }
+  .content-box {
+      max-width: 90%; /* Reduce max width */
+      margin: 10px auto; /* Less margin */
+  }
+  .btn-custom, .btn-submit {
+      font-size: 14px; /* Adjust button size */
+      padding: 8px 16px; /* Smaller padding */
+  }
+    #nextb, #nextb2, #backb, #backb2, #finish {
+      width: 80%; /* Make buttons wider but not full width */
+      font-size: 18px; /* Moderate font size */
+  }
+
+  #order .form input[type="submit"] {
+      font-size: 1em; /* Adjust font size */
+      padding: 10px 18px; /* Adjust padding */
+  }
+
+  .team {
+      flex-direction: column; /* Stack team members vertically */
+      margin: 30px 0;
+      padding: 30px 0;
+      justify-content: center; /* Horizontally center the images */
+      align-items: center; 
+  }
+
+  .team-member {
+      width: 45%; /* Make team members narrower */
+      margin: 15px auto; /* Center them */
+  }
+
+  .seasonal-menu {
+      grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+      gap: 12px; /* Adjust gap */
+      padding: 30px 15px;
+  }
+
+  .smenu-item img {
+      height: 250px; /* Adjust image height */
+  }
+
+  main p {
+      font-size: 1.1em; /* Slightly larger font size */
+      padding: 10px 30px; /* Moderate padding */
+  }
+
+  .btn-open-popup img {
+      width: 90px; /* Adjust image size */
+  }
+
+
+  .form-label {
+      font-size: 15px; /* Moderate font size */
+  }
+
+  .form-input {
+      font-size: 15px; /* Adjust input font size */
+      padding: 9px; /* Adjust padding */
+  }
+}
+  @media screen and (max-width: 390px) { /* iPhone 14 screen width */
+    body {
+        font-size: 14px; /* Adjust font size for readability */
+        padding: 10px; /* Add some padding for better spacing */
+    }
+
+    header {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px 20px; /* Reduce padding for smaller screens */
+    }
+
+    .logo {
+        width: 150px; /* Scale down the logo */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center-align navigation links */
+    }
+
+    nav a {
+        margin: 10px 0; /* Add vertical spacing */
+        font-size: 1em; /* Adjust font size for small screens */
+    }
+
+    main {
+        padding: 20px; /* Reduce padding for smaller screens */
+        font-size: 1em; /* Adjust font size */
+    }
+
+    figure img {
+        width: auto;
+        height: auto; /* Maintain aspect ratio */
+    }
+    .light-mode main, .dark-mode main {
+      max-width: 90%; /* Shrink the content width */
+      margin: 20px auto; /* Add spacing around content */
+      padding: 15px;
+  }
+
+  header {
+      flex-direction: column; /* Stack header content */
+      text-align: center; /* Center-align text */
+  }
+
+  .light-mode main h2, .dark-mode main h2 {
+      font-size: 1.5em; /* Adjust heading sizes */
+  }
+  figure img {
+    max-width: 100%; /* Images take full width of container */
+    height: auto;
+}
+}

@@ -26,20 +26,49 @@ function formatDate(date) {
 
 
 document.getElementById("colorButton").addEventListener("click", function() {
-  const colors = ['#f8c3c3', '#f9e8c1', '#c1f9c6', '#c1d6f9', '#dcc1f9', '#f9c1d1'];
+  const colors = ['#D8D2C2', '#fff', '#ECDFCC', '#E7CCCC', '##7a5959', '#E7CCCC','#C39898'];
   document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 });
 
-
 //display greeting
+
+// function displayDateTime() {
+//   const now = new Date();
+//   const formattedDate = formatDate(now);
+//   document.getElementById('datetime').textContent = formattedDate;
+// }
+// displayDateTime();
+// setInterval(displayDateTime, 60000);
+function formatDate(now) {
+  const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+  const dayOfWeek = daysOfWeek[now.getDay()];
+  const month = months[now.getMonth()];
+  const day = String(now.getDate()).padStart(2, '0');
+  const year = now.getFullYear();
+  const hours = String(now.getHours() % 12 || 12).padStart(2, '0');  // 12-hour format
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const ampm = now.getHours() < 12 ? 'AM' : 'PM';
+
+  return `${dayOfWeek}, ${month} ${day}, ${year} at ${hours}:${minutes}:${seconds} ${ampm}`;
+}
 
 function displayDateTime() {
   const now = new Date();
   const formattedDate = formatDate(now);
   document.getElementById('datetime').textContent = formattedDate;
 }
+
+// Call immediately to show time as soon as possible
 displayDateTime();
-setInterval(displayDateTime, 60000);
+
+// Update every second (1000ms)
+setInterval(displayDateTime, 1000);
+
+
+
 function greetBasedOnTime() {
   const now = new Date();
   const hours = now.getHours();
